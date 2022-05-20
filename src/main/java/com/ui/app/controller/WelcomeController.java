@@ -9,13 +9,11 @@ public class WelcomeController {
 	
 	@RequestMapping("/")
 	public ModelAndView getWelcomePage() {
-		System.out.println("WelcomeController -> getWelcomePage : starts");
 		
 		ModelAndView mv = new ModelAndView();
 		mv.setViewName("welcome");
 		mv.addObject("message", "Spring Boot Applications");
 		
-		System.out.println("WelcomeController -> getWelcomePage : ends");
 		return mv;
 	}
 
