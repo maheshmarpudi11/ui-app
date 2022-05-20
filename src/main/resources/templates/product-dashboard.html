@@ -25,7 +25,7 @@
 			<form th:object="${product}" th:action="@{/create-product}" action="#" method="post">
 			<fieldset style="width:300px">
 				<legend> <b>New Product </b></legend> </br>
-				<input type="text"  hidden="true"/> </br> </br>
+				<input type="text"  th:field="*{productId}" hidden="true"/> </br> </br>
 				<input type="text"  th:field="*{productName}" placeholder="Name"/> </br> </br>
 				<input type="text"  th:field="*{productDesc}" placeholder="Description"/> </br> </br>
 				<input type="text"  th:field="*{productCost}" placeholder="Unit Price"/> </br> </br>
@@ -38,7 +38,6 @@
 			<br/><br/>
 			<div style="color: green "> <span th:text="${response}"></span> </div>
 
-			<br/><br/>
 			<div align="center">
 			<h3> List of Product</h3>
 			<table style="width: 60%">

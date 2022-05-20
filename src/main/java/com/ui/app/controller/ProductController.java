@@ -79,9 +79,8 @@ public class ProductController {
 		
 		ModelAndView mv = new ModelAndView();
 		
-		List<ProductDTO> products = productService.getAllProducts();
-		
 		String response = productService.deleteProductById(id);
+		List<ProductDTO> products = productService.getAllProducts();
 		
 		mv.setViewName("product-dashboard");
 		mv.addObject("response", response);
